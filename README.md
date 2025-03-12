@@ -1,8 +1,30 @@
-# React + Vite
+# Mumbai Infra Pvt Ltd 🏗️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Mumbai Infra Pvt Ltd** repository! This project is built using **React.js** to showcase infrastructure and real estate solutions.
 
-Currently, two official plugins are available:
+## 🌍 Live Website
+🔗 [Visit Website](http://mumbainfra.com/)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- Modern and responsive design  
+- Interactive UI built with React.js  
+- Smooth navigation and user-friendly experience  
+- Contact form integrated with **Email.js** for direct email communication  
+- Optimized performance and SEO-friendly  
+
+## 🛠️ Technologies Used
+- **React.js**  
+- **HTML, CSS, JavaScript**  
+- **Tailwind.CSS**
+- **Email.js** (for contact form functionality)   
+
+
+## 📦 Installation & Setup
+To run this project locally, follow these steps:
+
+```bash
+git clone https://github.com/your-username/Mumbai-Infra-Pvt-Ltd.git
+cd Mumbai-Infra-Pvt-Ltd
+npm install
+npm start
+
