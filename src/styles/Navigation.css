@@ -1,0 +1,139 @@
+/* Navigation.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4; /* Off-white */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 10px 30px;
+  
+}
+
+.navbar-brand .logo {
+  height: 150px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s; /* Smooth transition for color and size */
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav-link:hover {
+  color: #007bff; /* Change color on hover */
+  transform: scale(1.1); /* Increase size on hover */
+}
+
+.nav-link.active {
+  color: #007bff; /* Active link color */
+}
+
+.nav-link:active {
+  color: #0056b3; /* Darker color when clicked */
+}
+
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.nav-links.open {
+  display: block; /* Show links when menu is open */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Style for the enquiry button */
+.nav-link.enquiry-btn {
+  color: white; /* White text color */
+  padding: 12px 24px;
+  border-radius: 25px; /* More rounded edges */
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Apply the color-changing animation */
+  animation: colorChange 5s infinite; /* Color change every 5 seconds, infinitely */
+}
+
+/* Color change animation */
+@keyframes colorChange {
+  0% {
+    background-color: #007bff; /* Initial blue color */
+  }
+  25% {
+    background-color: #ff5733; /* Orange color */
+  }
+  50% {
+    background-color: #28a745; /* Green color */
+  }
+  75% {
+    background-color: #ffc107; /* Yellow color */
+  }
+  100% {
+    background-color: #007bff; /* Back to initial blue */
+  }
+}
+
+/* Hover effect */
+.nav-link.enquiry-btn:hover {
+  transform: scale(1.05); /* Slight scaling effect on hover */
+  box-shadow: 0 4px 12px rgba(0, 86, 179, 0.4); /* Shadow effect on hover */
+}
+
+/* When clicked (active) */
+.nav-link.enquiry-btn:active {
+  transform: scale(1); /* Reset scale when clicked */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect when pressed */
+}
+
+
+
+/* for responsive design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    width: 250px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 0;
+    display: none; /* Initially hide navigation links */
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .nav-link {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+}
+
+  

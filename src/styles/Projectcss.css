@@ -1,0 +1,116 @@
+/* General Styles for Project Section */
+.our-projects {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 500;
+}
+
+.project-card {
+  padding: 10px;
+}
+
+.project-image {
+  width: 100%;
+  height: 300px;
+}
+
+.project-details {
+  background-color: #f9f9f9;
+  padding: 15px;
+  text-align: left;
+}
+
+.brochure-link {
+  display: block;
+  margin-top: 10px;
+  color: blue;
+}
+
+.project-location {
+  font-style: italic;
+  color: gray;
+}
+
+/* Project Slider Specific Styles */
+.project-slider .slick-prev,
+.project-slider .slick-next {
+  
+  border-radius: 0; /* Remove circular background */
+  padding: 0; /* Remove padding to avoid any background circle */
+  
+  z-index: 10; /* Ensure arrows are above the carousel */
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the arrows */
+  background-color: transparent; /* No background color */
+  border: none; /* No border around the arrows */
+  color: blueviolet; /* Arrow color */
+  transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+.project-slider .slick-prev:before,
+.project-slider .slick-next:before {
+  display: none; /* Remove default text content */
+  content: none;
+}
+
+.project-slider .slick-prev:after,
+.project-slider .slick-next:after {
+  content: '←'; /* Left arrow */
+  font-size: 40px; /* Bigger arrow symbol */
+  color: blueviolet; /* Set arrow color */
+}
+
+.project-slider .slick-next:after {
+  content: '→'; /* Right arrow */
+}
+
+/* Hover effect to highlight arrows in Project Slider */
+.project-slider .slick-prev:hover,
+.project-slider .slick-next:hover {
+  transform: scale(1.1); /* Slightly increase size on hover */
+  
+}
+.slick-next{
+  right: -50px;
+}
+.slick-prev{
+  left: -80px;
+}
+/* Hide arrows on small screens for Project Slider */
+@media (max-width: 768px) {
+  .project-slider .slick-prev,
+  .project-slider .slick-next {
+    display: none !important;
+  }
+}
+
+/* Media Queries for Responsiveness in Project Slider */
+@media (max-width: 1024px) {
+  .our-projects {
+    width: 90%;
+  }
+  .project-details {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-projects {
+    width: 100%;
+  }
+  .project-card {
+    padding: 5px;
+  }
+  .project-details {
+    padding: 8px;
+  }
+  .brochure-link {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,260 @@
+/* General Styles for the Testimonials Section */
+.testimonials-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .testimonials-section h2 {
+    font-size: 1.8rem;
+    color: goldenrod;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  /* Testimonial Card Container */
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+    position: relative; /* Necessary for positioning child elements */
+  }
+  
+  /* Speech Bubble Design for Testimonial Text */
+  .testimonial-bubble {
+    background-color: #6d7687; /* Bubble color */
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .testimonial-bubble:after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Below the bubble */
+    left: 20px; /* Adjust this to point toward the avatar */
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: #f5f8fa transparent transparent transparent; /* Match the bubble color */
+    width: 0;
+    height: 0;
+  }
+  
+  /* Testimonial Comment Text */
+  .testimonial-comment {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Star Rating */
+  .testimonial-stars {
+    color: #ffc107; /* Yellow stars */
+    font-size: 1.2rem;
+  }
+  
+  /* Footer with User Avatar and Name */
+  .testimonial-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px; /* Space for the triangle */
+    position: relative; /* Necessary for proper layering */
+    z-index: 2; /* Ensure avatar and text appear above the triangle */
+  }
+  
+  .testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #6d7687; /* Match bubble color */
+    object-fit: cover;
+    background-color: white; /* Ensure a clean look */
+    margin-top: -10px; /* Overlap slightly with the triangle */
+  }
+  
+  .testimonial-user {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Testimonial Slider Specific Styles */
+  .testimonial-slider .slick-prev-testimonial,
+  .testimonial-slider .slick-next-testimonial {
+
+    padding: 0; /* Remove any padding */
+    z-index: 10; /* Ensure arrows are above the carousel */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the arrows */
+    background-color: transparent; /* No background color */
+    border: none; /* No border around the arrows */
+    color: blueviolet; /* Set arrow color */
+    transition: all 0.3s ease; /* Smooth hover transition */
+  }
+  
+  /* Remove default text content (like 'before' arrow content) */
+  .testimonial-slider .slick-prev-testimonial:before,
+  .testimonial-slider .slick-next-testimonial:before {
+    content: none; /* No content for the default arrows */
+    display: none; /* Ensure the default arrow text is hidden */
+  }
+  
+  /* Custom arrows (using 'after' content) */
+  .testimonial-slider .slick-prev-testimonial:after,
+  .testimonial-slider .slick-next-testimonial:after {
+    font-size: 40px; /* Bigger arrow symbol */
+    color: blueviolet; /* Set arrow color */
+  }
+  
+  /* Left arrow */
+  .testimonial-slider .slick-prev-testimonial:after {
+    content: '←'; /* Left arrow */
+  }
+  
+  /* Right arrow */
+  .testimonial-slider .slick-next-testimonial:after {
+    content: '→'; /* Right arrow */
+  }
+  
+  /* Hover effect to highlight arrows in Testimonial Slider */
+  .testimonial-slider .slick-prev-testimonial:hover,
+  .testimonial-slider .slick-next-testimonial:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+
+  }
+  
+  /* Hide arrows on small screens for Testimonial Slider */
+  @media (max-width: 768px) {
+    .testimonial-slider .slick-prev-testimonial,
+    .testimonial-slider .slick-next-testimonial {
+      display: none !important; /* Hide arrows on smaller screens */
+    }
+  }
+  
+  /* Media Queries for Responsiveness in Testimonial Slider */
+  @media (max-width: 1024px) {
+    .testimonials-section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .testimonial-card {
+      max-width: 90%;
+    }
+  
+    .testimonial-comment {
+      font-size: 0.9rem;
+    }
+  
+    .testimonial-stars {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .testimonial-card {
+      max-width: 100%;
+    }
+  
+    .testimonial-comment {
+      font-size: 0.85rem;
+    }
+  
+    .testimonial-stars {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .testimonial-card {
+      padding: 10px;
+    }
+  
+    .testimonial-comment {
+      font-size: 0.8rem;
+    }
+  
+    .testimonial-stars {
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* General Styles for Project Slider */
+  .our-projects {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+  }
+  
+  .project-card {
+    padding: 10px;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .project-details {
+    background-color: #f9f9f9;
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .brochure-link {
+    display: block;
+    margin-top: 10px;
+    color: blue;
+  }
+  
+  .project-location {
+    font-style: italic;
+    color: gray;
+  }
+  
+  
+  /* Hide arrows on small screens for Project Slider */
+  @media (max-width: 768px) {
+    .project-slider .slick-prev,
+    .project-slider .slick-next {
+      display: none !important;
+    }
+  }
+  
+  /* Media Queries for Responsiveness in Project Slider */
+  @media (max-width: 1024px) {
+    .our-projects {
+      width: 90%;
+    }
+    .project-details {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .our-projects {
+      width: 100%;
+    }
+    .project-card {
+      padding: 5px;
+    }
+    .project-details {
+      padding: 8px;
+    }
+    .brochure-link {
+      font-size: 14px;
+    }
+  }
+  

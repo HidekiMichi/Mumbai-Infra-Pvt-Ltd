@@ -1,0 +1,105 @@
+.contact-container {
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 2rem;
+  background: linear-gradient(120deg, #83dff0, #f0f0f0);
+  background-size: 200% 200%;
+  animation: gradient-animation 6s ease infinite;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.contact-header {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.contact-header > h6 {
+  color: #d4af37;
+}
+
+.contact-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Space between rows */
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly in the row */
+  gap: 2rem; /* Space between items in the row */
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1; /* Equal space for each contact item */
+}
+
+.contact-icon {
+  color: #d4af37; /* Gold color */
+  font-size: 1.5rem;
+}
+
+.contact-item h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-row {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .contact-item {
+    flex: none; /* Remove equal spacing for stacked items */
+    width: 100%; /* Full width for each item */
+  }
+
+  .contact-container {
+    height: auto; /* Allow height to adjust naturally on smaller screens */
+    padding: 1.5rem; /* Reduce padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-header h6 {
+    font-size: 0.9rem; /* Smaller font size */
+  }
+
+  .contact-header h1 {
+    font-size: 1.5rem; /* Adjust main header size */
+  }
+
+  .contact-item h4 {
+    font-size: 1rem; /* Reduce header font size */
+  }
+
+  .contact-item p {
+    font-size: 0.8rem; /* Smaller text size */
+  }
+}

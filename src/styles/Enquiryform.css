@@ -1,0 +1,156 @@
+/* Navbar styles */
+.navbar {
+  position: relative; /* To ensure navbar stays on top */
+  z-index: 100; /* Ensure navbar is above other content */
+}
+
+.enquiry-page {
+  position: relative;
+  min-height: 100vh; /* Ensures the page covers the full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #dcdcdc;
+  z-index: 1; /* Keep the page content below the navbar */
+}
+
+.enquiry-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/Enquiryformimg.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  filter: blur(8px); /* Apply blur effect to the background */
+  z-index: -1; /* Ensure the background stays behind the content */
+}
+
+.enquiry-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: color-change 5s infinite; /* Color-changing animation */
+  transition: transform 0.3s ease; /* Smooth font-size transition */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+}
+
+.enquiry-title:hover {
+  transform: scale(1.1); /* Increase size on hover */
+}
+
+@keyframes color-change {
+  0% { color: #ff6f61; }
+  25% { color: #6b5b95; }
+  50% { color: #88b04b; }
+  75% { color: #f7cac9; }
+  100% { color: #ff6f61; }
+}
+
+.enquiry-form {
+  background: linear-gradient(
+    rgba(0, 123, 255, 0.4), /* Light blue color with transparency */
+    rgba(255, 69, 0, 0.6) /* Red-Orange color with more transparency */
+  ); /* Apply a linear gradient background */
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 100%;
+  max-width: 600px; /* Restrict form width */
+  position: relative; /* Ensure form is positioned correctly above the background */
+  z-index: 2; /* Ensure form is above background */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+}
+
+.form-group {
+  width: 100%; /* Ensure the form groups take the full width */
+  margin-bottom: 15px; /* Add spacing between fields */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; /* Make all fields take up 100% width of the container */
+  padding: 12px; /* Ensure uniform padding for all fields */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box; /* Make sure padding is included in the width */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue glow effect */
+}
+
+.error {
+  color: #ff0000;
+  font-size: 14px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.back-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10; /* Ensure button is above other content */
+  position: absolute; /* Position it relative to the form */
+  right: 20px; /* Align to the right side inside the form */
+  bottom: 20px; /* Position it at the bottom */
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .enquiry-form {
+    padding: 20px;
+    width: 90%; /* Adjust form width for smaller screens */
+  }
+
+  .enquiry-title {
+    font-size: 28px; /* Reduce title size on small screens */
+  }
+  .back-button{
+    width: 100px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}

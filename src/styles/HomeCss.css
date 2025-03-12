@@ -1,0 +1,102 @@
+.Homepage {
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.text-overlay {
+  position: absolute; /* Allows precise positioning */
+  top: 50%; /* Centers vertically */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-50%, -50%); /* Fine-tunes centering */
+  font-size: 2rem; /* Adjust font size */
+  font-weight: bold; /* Makes the text bold */
+  color: black; /* Text color */
+  background-color: white;
+  text-align: center; /* Centers text if multiline */
+  padding: 10px 15px;
+  border-radius: 8px;
+  animation: fadeEffect 6s infinite; /* Extends animation duration to 6 seconds */
+  max-width: 90%; /* Prevents the text from overflowing */
+}
+
+/* Animation for fading text */
+@keyframes fadeEffect {
+  0%, 100% {
+    opacity: 0; /* Invisible at start and end */
+  }
+  50% {
+    opacity: 1; /* Fully visible at midpoint */
+  }
+}
+
+.marquee {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: yellow; /* Highlighted background */
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.marquee span {
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  animation: marqueeEffect 20s linear infinite;
+}
+
+@keyframes marqueeEffect {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Homepage {
+    height: 60vh; /* Adjust height for smaller screens */
+  }
+
+  .text-overlay {
+    font-size: 1.5rem; /* Smaller font size */
+    padding: 8px 10px; /* Reduced padding */
+  }
+
+  .marquee span {
+    font-size: 1.2rem; /* Smaller font size for marquee text */
+  }
+}
+
+@media (max-width: 480px) {
+  .Homepage {
+    height: 50vh; /* Further reduced height for very small screens */
+  }
+
+  .text-overlay {
+    font-size: 0.5rem; /* Smaller font size */
+    gap: 2px;
+  
+  }
+
+  .marquee span {
+    font-size: 1rem; /* Smaller font size for marquee text */
+  }
+}
